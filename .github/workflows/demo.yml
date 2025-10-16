@@ -17,8 +17,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-  Verify:
-    runs-on: ubuntu-latest
-    steps:
       - name: Printing logs
         run: echo "The logs are: ${{ github.workspace }}"
+      
