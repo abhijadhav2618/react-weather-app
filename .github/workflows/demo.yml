@@ -1,0 +1,24 @@
+name: Demo
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  Testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning the code
+        uses: actions/checkout
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v6
+
+      - name: Install dependencies
+        run: npm ci
+
+  Verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing logs
+        run: echo "The logs are: {{ github.workspace }}"
