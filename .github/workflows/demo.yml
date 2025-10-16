@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cloning the code
-        uses: actions/checkout
+        uses: actions/checkout@v5
 
       - name: Install NodeJS
         uses: actions/setup-node@v6
